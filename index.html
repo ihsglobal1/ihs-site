@@ -172,7 +172,15 @@
   .contact-row{display:flex; gap:16px; padding:18px 0; border-top:1px solid var(--line); align-items:baseline;}
   .contact-row .label{font-family:'IBM Plex Mono', monospace; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--ink-soft); width:90px; flex-shrink:0;}
   .contact-row .val{font-size:16.5px; font-weight:500;}
-  .calendly-wrap{border:1px solid var(--line); border-radius:6px; overflow:hidden; background:#fff;}
+  .status-pill{display:inline-flex; align-items:center; gap:10px; font-family:'IBM Plex Mono', monospace; font-size:12.5px; letter-spacing:0.1em; text-transform:uppercase; padding:8px 16px; border-radius:999px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.3); color:#fff; margin-bottom:22px;}
+  .status-dot{width:9px; height:9px; border-radius:50%; background:#6FCF8E; box-shadow:0 0 0 4px rgba(111,207,142,0.25);}
+  .inquiry-panel{background:var(--ocean-deep); color:#fff; border-radius:6px; padding:48px 44px; align-self:start;}
+  .inquiry-panel .status-pill{margin-bottom:26px;}
+  .inquiry-panel h3{color:#fff; font-size:clamp(28px,3.4vw,38px); line-height:1.1;}
+  .inquiry-panel p{color:rgba(255,255,255,0.78); margin:18px 0 30px; font-size:17px;}
+  .inquiry-panel ul{list-style:none; margin:0 0 34px; border-top:1px solid rgba(255,255,255,0.15);}
+  .inquiry-panel li{padding:13px 0; border-bottom:1px solid rgba(255,255,255,0.15); font-size:15.5px;}
+  .inquiry-panel li::before{content:"→ "; color:var(--gold);}
 
   footer{background:var(--ocean-deep); color:rgba(255,255,255,0.65); padding:48px 0;}
   .footer-inner{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;}
@@ -215,6 +223,7 @@
 
 <section class="hero" id="top">
   <div class="hero-inner">
+    <span class="status-pill"><span class="status-dot"></span>Now taking inquiries</span>
     <span class="eyebrow">Public Health Consulting — South Pacific</span>
     <h1>Tackling neglected tropical diseases across the Pacific.</h1>
     <p class="lede">Innovative Health Solutions is a public health consultancy established in Port Vila, Vanuatu, designing evidence-based programs at the intersection of neglected tropical diseases, climate change, and Pacific health systems, serving Port Vila and all neighboring islands across Vanuatu.</p>
@@ -351,15 +360,23 @@
     <div class="contact-info">
       <span class="eyebrow">Get in Touch</span>
       <h2>Book a consultation.</h2>
-      <p class="lede">Pick a time directly on the calendar, or reach out by email, phone, or WhatsApp. Based in Port Vila, Vanuatu (UTC+11) — available for calls across the Pacific, Asia, and remotely worldwide.</p>
+      <p class="lede">Reach out by email, phone, or WhatsApp. Based in Port Vila, Vanuatu (UTC+11) — available for calls across the Pacific, Asia, and remotely worldwide.</p>
       <div class="contact-row"><div class="label">Email</div><div class="val">ihsglobal.co@gmail.com</div></div>
       <div class="contact-row"><div class="label">Phone</div><div class="val">+567 5574</div></div>
       <div class="contact-row"><div class="label">WhatsApp</div><div class="val">+567 5574</div></div>
       <div class="contact-row"><div class="label">Location</div><div class="val">Port Vila, Efate, Vanuatu</div></div>
     </div>
-    <div class="calendly-wrap">
-      <div class="calendly-inline-widget" data-url="https://calendly.com/ihsglobal-co" style="min-width:320px;height:680px;"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <div class="inquiry-panel">
+      <span class="status-pill"><span class="status-dot"></span>Now taking inquiries</span>
+      <h3>Let's talk about your project.</h3>
+      <p>Send a short note about your program, proposal, or event, and IHS will get back to you to arrange a call.</p>
+      <ul>
+        <li>NTD program design &amp; surveillance</li>
+        <li>Climate-health integration</li>
+        <li>Proposal &amp; grant writing</li>
+        <li>Training, workshops &amp; talks</li>
+      </ul>
+      <a href="mailto:ihsglobal.co@gmail.com?subject=Consultation%20inquiry" class="btn btn-primary">Email an inquiry</a>
     </div>
   </div>
 </section>
